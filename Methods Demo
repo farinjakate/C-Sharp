@@ -58,7 +58,7 @@ namespace _12_MethodsDemo
             return fn + " , " + ln;
         }
 
-        //return statement is used to give cursor back to calling method
+    
         static void printE(bool isConfirmed)
         {
             if (!isConfirmed)
