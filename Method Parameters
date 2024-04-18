@@ -1,0 +1,107 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _13_methodParameters
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //    int a = 10;
+            //    PrintA(a);
+            //    Console.WriteLine(a);
+
+
+            //int a = 30;
+            //PrintB(ref a);
+            //Console.WriteLine(a);
+
+            // int a = 90;
+
+            //int a;
+            //PrintC(out a);
+            //Console.WriteLine(a);
+
+
+            int a = 10; int b = 2, add, sub, mul, div;
+            Print1(a, b, out add, out sub, out mul, out div);
+            Console.WriteLine($"Addition:{a}+{b}={add}");
+            Console.WriteLine($"substraction:{a}-{b}={sub}");
+            Console.WriteLine($"multiplicaton:{a}*{b}={mul}");
+            Console.WriteLine($"division:{a}/{b}={div}");
+
+            int[] nums1 = new int[] { 10, 20, 30 };
+            PrintD(nums1);//
+
+
+            Console.ReadLine();
+
+        }
+        static void PrintA(int a)
+        {
+
+            a = 100;
+        }
+
+        static void PrintB(ref int b)
+        {
+            b = 300;
+        }
+
+        static void PrintC(out int a)
+        {
+            a = 100;
+        }
+        ////write a sigle method which returns adds,sub,div,multiplication
+        static void Print1(int a, int b, out int add, out int sub, out int mul, out int div)
+        {
+            add = a + b;
+            sub = a - b;
+            mul = a * b;
+            div = a / b;
+
+        }
+
+        static int Print1(int a, int b, out int sub, out int mul, out int div)
+        {
+            // add = a + b;
+            sub = a - b;
+            mul = a * b;
+            div = a / b;
+            return a + b;
+        }
+
+        static void PrintD(int[] numbers)
+        {
+
+            if (numbers != null && numbers.Length > 0)
+            {
+
+                int sum = 0;
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    sum += numbers[i];
+                }
+                Console.WriteLine($"sum of array :{sum}");
+            }
+            else
+            {
+                Console.WriteLine("Empty Array");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+       
+    
