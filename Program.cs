@@ -4,76 +4,100 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _4_StringType
+namespace _5_TypeConversion
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            int i = 10, j = 10;
+            Console.WriteLine(i + j);
+            //20
 
-            string name = "Farin";
-            Console.WriteLine(name);
+            //int=>string
+            string a = i.ToString();
+            string b = j.ToString();
+            Console.WriteLine(a + b);
 
-            Console.WriteLine(name.Length);
 
-            name = "       Farin";
-            Console.WriteLine(name);
-            Console.WriteLine(name.Trim());
+            byte b1 = 10;
+            short s1 = b1;//byte->short
+            Console.WriteLine(s1);//10
 
-            name = "Farin";
-            Console.WriteLine(name.ToUpper());//FARIN
-            Console.WriteLine(name.ToLower());//farin
+            float f1 = s1; //short to float
+            Console.WriteLine(f1);//10
 
-            name = "\"Farin\"";//    this \ have a meaning
-            Console.WriteLine(name); // "Farin"
+            //int i1 = f1; // float -> int
+            int i1 = (int)f1;// due to loss of data thats why explicit conversion
+            Console.WriteLine(f1);
+             
+            f1 = 25.55f;
+            i1 = (int)f1;//float->int
+            Console.WriteLine(i1);//25
 
-            name = "\'Farin\'";
-            Console.WriteLine(name);
+            string s = "100";
+            // i1 =(int) s;// string ->int
+            i1 = Convert.ToInt32(s);//convert class
+            Console.WriteLine(i1);//100
 
-            name = "\\Farin\\";
-            Console.WriteLine(name); // \Farin\
+            s = "true"; 
+            bool bb = Convert.ToBoolean(s);//string->bool
+            Console.WriteLine(bb);
 
-            Console.WriteLine("sabiha inamdar");
-            Console.WriteLine("sabiha\tinamdar");// three spaces
-            Console.WriteLine("sabiha\ninamdar");// for next line
-
-            // string path = "E:\\temp\\Batch22\\Client";
-            string path = @"E:\temp\Batch22\Client";
-            Console.WriteLine(path); //@ is a verbatin letral to finding the meaning of \ in path
-
-            string firstName = "Farin";
-            string lastName = "Jakate";
-            string fullName = firstName + lastName;
-            Console.WriteLine(fullName); // FarinJakate
-
-            fullName = firstName + " " + lastName;
-            Console.WriteLine(fullName); // Farin Jakate
-
-            fullName = string.Concat(firstName, " ", lastName);
-            Console.WriteLine(fullName); // Farin Jakate
-
-            string middleName = "shahanur";
-            fullName = string.Concat(firstName + " " + middleName + " " + lastName);
-            Console.WriteLine(fullName); // Farin shahanur jakate
-
-            fullName = string.Join(" ", firstName, middleName, lastName);
-            Console.WriteLine(fullName); // Farin shahanur Jakate
 
             
+            //parse() method throws error when string is not in correct format
+            s = "777";
+            i1 = int.Parse(s);//string->int
+            Console.WriteLine(i1);//777
+            
+            // s = "XYZ";
+            //i1 = int.Parse(s);//runtime error
+            //Console.WriteLine(i1);
 
-            fullName = string.Join(" ", "Full", "Name", ":", firstName, middleName, lastName);
-            Console.WriteLine(fullName);//// Full Name : Farin shahanur Jakate
+            //TryParse() -> it hadles the runtime error
+            /*Convert and return Conversion status along with converted
+            value .
+            in case of runtime error it returns false as a status 
+            and default value as output
+            default value of bool is false
+            default value of int is 0
+            default value of string is null*/
 
-            // placeholder syntax
-            fullName = string.Format("Full Name : {0} {1} {2}", firstName, middleName, lastName);
-            Console.WriteLine(fullName);//Full Name : Farin shahanur Jakate
+            s = "2000";
+            bb = int.TryParse(s, out i1);
+            Console.WriteLine($"Status :{bb} Result :{i1}");
+            //Status :True Result :2000
 
-            // string interpolation
-            fullName = $"Full Name : {firstName} {middleName}\t, {lastName}";
-            Console.WriteLine(fullName);//Full Name : Farin shahanur      , Jakate
 
-            fullName = $"My Son Name Is : {firstName}";
-            Console.WriteLine(fullName);//My Son Name Is : Farin
+            s = "XYZ";
+            bb = int.TryParse(s, out i1);
+            Console.WriteLine($"Status :{bb} Result :{i1}");
+            //Status :False Result :0
+
+            s = "ABC";
+            bb = int.TryParse(s, out i1);
+            Console.WriteLine($"Status :{bb} Result :{i1}");
+
+            s = "true";
+            bool b3 = Convert.ToBoolean(s);
+            Console.WriteLine(b3);
+
+
+
+            s = "true";
+            bool b4 = Convert.ToBoolean(s);
+            Console.WriteLine(b4);
+
+
+
+
+
+            decimal X = 10;
+            long l = (long)X;//decimal ->long
+            Console.WriteLine(l);//10
+
+
 
             Console.ReadLine();
 
