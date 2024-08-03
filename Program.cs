@@ -4,91 +4,186 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _7_ConditionalStatement
+namespace _8_ConditionalStatementsExamples
 {
     internal class Program
     {
         static void Main(string[] args)
-        {
+          {
+            //    Console.WriteLine("Please enter first number");
+            //    int first = int.Parse(Console.ReadLine());
 
-            int i= 12;
-            //if (i == 10)// condition operator output is always true or false
-            // {
+            //    Console.WriteLine("Please enter second number");
+            //    int second = int.Parse(Console.ReadLine());
 
-            //  console.writeline($"{i} : ten");
-            //  console.writeline("even");
-            // }    
-            // else
-            // {
-            //     console.writeline($"{i} : not ten");
-            // }
+            //    Console.WriteLine("Please enter third number");
+            //    int third = int.Parse(Console.ReadLine());
+
+            //    Console.WriteLine($"You enterd :{first},{second},{third}");
 
 
-            // OR
-            //Ternary operator
-            //(condition) ? Statement1(true) : Statement2(false);
 
-            //i = 30;
-            //string result = (i == 10) ? "ten" : "not ten";
-            //console.writeline($"{i} :{result}");
 
-            //OR
-            //if-else if-else ladder
-            //i = 40;
-            //if (i == 10)
+
+            #region nested is else
+
+            //if (first > second)
             //{
-            //    Console.WriteLine($"{i}:TEN");
-            //}
-            //else if (i == 20)
+            //    if (first > third)
+            //    {
+            //        Console.WriteLine($"{first} is greater number");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"{third} is greater number");
+            //    }
+            //}   
+            //else if (second > first)
             //{
-            //    Console.WriteLine($"{i}:TWENTY");
-            //}
-            //else if (i == 30)
-            //{
-            //    Console.WriteLine($"{i}:THIRTY");
+            //    if (second > third)
+            //    {
+            //        Console.WriteLine($"{second} is greater number");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"{third} is greater number");
+            //    }
             //}
             //else
-            //{ 
-            //    Console.WriteLine($"{i}:NOT 10 20 or 30");
+            //{
+            //    if (first > third)
+            //    {
+            //        Console.WriteLine($"{first}, {second} are greater number");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"{third} is greater number");
+            //    }
             //}
 
-            ////switch
-            //i = 30;
-            //switch(i)
+
+
+
+            #endregion nested is else
+
+
+            #region nested Ternary operator
+            //ternary perator
+            // //int number = (first > second) ? first : second;
+
+
+            //int number = (first > second) ?
+            //  ((first > third) ? first : third) :
+            //((second > third) ? second : third);
+
+            //Console.WriteLine($"{number} is greater number");
+
+
+
+            #endregion nested Ternary operator
+
+
+            #region divisible 3 & 5
+
+            //if input number is divisible by 3=THREE
+            //iF input number is divisible by 5=FIVE
+            //if input number is divisible by 3 & 5 =THREEFIVE
+
+            //Console.WriteLine("Please Enter a number");
+            //int num = int.Parse(Console.ReadLine());
+
+
+
+            //if (num % 3 == 0 && num % 5 == 0)
             //{
-            //    case 10:
-            //        Console.WriteLine($"{i} : TEN");
-            //        break;
-            //    case 20:
-            //        Console.WriteLine($"{i} : TWENTY");
-            //       break;
+            //    Console.WriteLine("THREE AND FIVE");
+            //}
+            //else if (num % 3 == 0)
+            //{
+            //    Console.WriteLine("THREE");
+            //}
+            //else if (num % 5 == 0)
+            //{
+            //    Console.WriteLine("FIVE");
+            //}
+
+            #endregion divisible 3 & 5
+
+
+
+            //for (int i = 1; i <= 5; i++)
+            //{
+            //    for (int j = 1; j <= 5; j++)
+            //    { Console.Write($"{j}\t")
+            //            }
+            //    Console.WriteLine();
+            //}
+
+            #region even/odd number
+
+            // Ternary operator
+
+            //Console.WriteLine("Please enter a number");
+            //int num = int.Parse(Console.ReadLine());
+
+            //string result = (num % 2 == 0) ? "Even" : "Odd";
+
+            //Console.WriteLine($"{num} is {result} number");
+
+            #endregion even / odd
+
+
+
+            #region grade meaning
+
+            //Console.WriteLine("please enter a number");
+            //char grade = char.Parse(Console.ReadLine());
+
+            //switch (grade)
+            //{
+            //    case 'A':
+
+            //            Console.WriteLine($"{grade}:Distinction");
+            //            break;
+
+            //    case 'B':
+
+            //            Console.WriteLine($"{grade}: First class");
+            //            break;
+
+            //    case 'C':
+
+            //            Console.WriteLine($"{grade}:second class");
+            //            break;
+
+            //    case 'F':
+
+            //            Console.WriteLine($"{grade}: Failed"); 
+            //            break;
 
             //    default:
-            //        Console.WriteLine($"{i} : NOT 10 20 or 30");
-            //        break;
-            //    case 30:
-            //        Console.WriteLine($"{i} : THIRTY");
+
+            //        Console.WriteLine($"{grade} : Invalid Grade");
             //        break;
 
+            //}
 
 
 
-            int e = 30, r = 10;
-            if (e > r)
-            {
-                Console.WriteLine("{e} is greater than {r}");
-            }
-            else if (r > e)
-            {
-                Console.WriteLine("{r} is grater than {e}");
-            }
-            else
-            {
-                Console.WriteLine("{e} and {r} is equal");
-            }
+
+
+
+
+
+
+
+
+
+
+
+            #endregion grade meaning
 
             Console.ReadLine();
-        }
 
 
 
@@ -96,17 +191,6 @@ namespace _7_ConditionalStatement
 
 
 
-
-
-
-
-
-
-
-
-
-
-        
 
 
 
@@ -115,5 +199,4 @@ namespace _7_ConditionalStatement
 
         }
     }
-
-
+}
