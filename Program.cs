@@ -4,79 +4,81 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3_Operators
+namespace _4_StringType
 {
     internal class Program
     {
         static void Main(string[] args)
         {
 
-            int i = 10, j = 10;
-            Console.WriteLine(i); // 10
+            string name = "Farin";
+            Console.WriteLine(name);
 
-            i = 20;
-            Console.WriteLine(i); // 20
+            Console.WriteLine(name.Length);
 
-            int a = i + j;
-            Console.WriteLine(a); // 30
+            name = "       Farin";
+            Console.WriteLine(name);
+            Console.WriteLine(name.Trim());
 
-            int s = i - j;
-            Console.WriteLine(s); // 10
+            name = "Farin";
+            Console.WriteLine(name.ToUpper());//FARIN
+            Console.WriteLine(name.ToLower());//farin
 
-            int m = i * j;
-            Console.WriteLine(m); // 200
+            name = "\"Farin\"";//    this \ have a meaning
+            Console.WriteLine(name); // "Farin"
 
-            int d = i / j;
-            Console.WriteLine(d); // 2
+            name = "\'Farin\'";
+            Console.WriteLine(name);
 
-            int mo = 5 % 2;
-            Console.WriteLine(mo); // 1
+            name = "\\Farin\\";
+            Console.WriteLine(name); // \Farin\
 
-            // i = i + 1; // 20
-            i++;
-            Console.WriteLine(i); // 21
+            Console.WriteLine("sabiha inamdar");
+            Console.WriteLine("sabiha\tinamdar");// three spaces
+            Console.WriteLine("sabiha\ninamdar");// for next line
 
-            // Console.WriteLine(i++); // 21 // post increment
-            Console.WriteLine(++i); // 22 // pre increment
-            Console.WriteLine(i); // 22
+            // string path = "E:\\temp\\Batch22\\Client";
+            string path = @"E:\temp\Batch22\Client";
+            Console.WriteLine(path); //@ is a verbatin letral to finding the meaning of \ in path
+
+            string firstName = "Farin";
+            string lastName = "Jakate";
+            string fullName = firstName + lastName;
+            Console.WriteLine(fullName); // FarinJakate
+
+            fullName = firstName + " " + lastName;
+            Console.WriteLine(fullName); // Farin Jakate
+
+            fullName = string.Concat(firstName, " ", lastName);
+            Console.WriteLine(fullName); // Farin Jakate
+
+            string middleName = "shahanur";
+            fullName = string.Concat(firstName + " " + middleName + " " + lastName);
+            Console.WriteLine(fullName); // Farin shahanur jakate
+
+            fullName = string.Join(" ", firstName, middleName, lastName);
+            Console.WriteLine(fullName); // Farin shahanur Jakate
+
+            
+
+            fullName = string.Join(" ", "Full", "Name", ":", firstName, middleName, lastName);
+            Console.WriteLine(fullName);//// Full Name : Farin shahanur Jakate
+
+            // placeholder syntax
+            fullName = string.Format("Full Name : {0} {1} {2}", firstName, middleName, lastName);
+            Console.WriteLine(fullName);//Full Name : Farin shahanur Jakate
+
+            // string interpolation
+            fullName = $"Full Name : {firstName} {middleName}\t, {lastName}";
+            Console.WriteLine(fullName);//Full Name : Farin shahanur      , Jakate
+
+            fullName = $"My Son Name Is : {firstName}";
+            Console.WriteLine(fullName);//My Son Name Is : Farin
+
+            Console.ReadLine();
 
 
 
-            // compound assignment
-
-            // i = i + 5;
-            // i += 5;
-            i -= 7;
-            Console.WriteLine(i); // 15
-
-            i *= 3;
-            Console.WriteLine(i); // 45
-
-            i /= 5;
-            Console.WriteLine(i); // 9
-
-            bool result = i == j;
-            Console.WriteLine(result); // false
-
-            result = i != j;
-            Console.WriteLine(result); // true
-
-            result = i < j;
-            Console.WriteLine(result); // true
-
-            i++;
-            result = i >= j;
-            Console.WriteLine(result); // true
-
-            int k = 20;
-            result = i >= j && j > k;
-            Console.WriteLine(result); // false
-
-            result = i >= j || j > k;
-            Console.WriteLine(result); // true
-
-
-            Console.ReadLine(); // to wait
 
 
 
