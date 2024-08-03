@@ -1,201 +1,154 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Net.Sockets;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _8_ConditionalStatementsExamples
+namespace _9_LoopingStatements
 {
     internal class Program
     {
         static void Main(string[] args)
-          {
-            //    Console.WriteLine("Please enter first number");
-            //    int first = int.Parse(Console.ReadLine());
+        {
 
-            //    Console.WriteLine("Please enter second number");
-            //    int second = int.Parse(Console.ReadLine());
+            //Console.WriteLine("HI EVERYONE");
+            //Console.WriteLine("HI EVERYONE");
+            //Console.WriteLine("HI EVERYONE");
+            //Console.WriteLine("HI EVERYONE");
+            //Console.WriteLine("HI EVERYONE");
 
-            //    Console.WriteLine("Please enter third number");
-            //    int third = int.Parse(Console.ReadLine());
-
-            //    Console.WriteLine($"You enterd :{first},{second},{third}");
-
-
-
-
-
-            #region nested is else
-
-            //if (first > second)
+            #region whileloop
+            //int start = 1;//Initialization
+            //while(start<=5)//Condition
             //{
-            //    if (first > third)
-            //    {
-            //        Console.WriteLine($"{first} is greater number");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine($"{third} is greater number");
-            //    }
-            //}   
-            //else if (second > first)
-            //{
-            //    if (second > third)
-            //    {
-            //        Console.WriteLine($"{second} is greater number");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine($"{third} is greater number");
-            //    }
+            //    Console.WriteLine(start);
+            //    start++;//updation
+
             //}
-            //else
+            //1
+            //2
+            //3
+            //4
+            //5
+
+            //int num = 1;
+            //while(num<=5)
             //{
-            //    if (first > third)
-            //    {
-            //        Console.WriteLine($"{first}, {second} are greater number");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine($"{third} is greater number");
-            //    }
+            //    Console.WriteLine("farin");
+            //        num++;
+            //}
+            #endregion while loop
+
+
+
+            #region do While loop
+            //int num = 1;
+            //do
+            //{
+            //    Console.WriteLine("Rehana");
+            //    num++;
+            //} while (num <= 10);
+
+            #endregion do while loop
+
+            //for (int num=1; num<=10;  num++)
+            //{
+            //    Console.WriteLine(num);
             //}
 
-
-
-
-            #endregion nested is else
-
-
-            #region nested Ternary operator
-            //ternary perator
-            // //int number = (first > second) ? first : second;
-
-
-            //int number = (first > second) ?
-            //  ((first > third) ? first : third) :
-            //((second > third) ? second : third);
-
-            //Console.WriteLine($"{number} is greater number");
-
-
-
-            #endregion nested Ternary operator
-
-
-            #region divisible 3 & 5
-
-            //if input number is divisible by 3=THREE
-            //iF input number is divisible by 5=FIVE
-            //if input number is divisible by 3 & 5 =THREEFIVE
-
-            //Console.WriteLine("Please Enter a number");
-            //int num = int.Parse(Console.ReadLine());
-
-
-
-            //if (num % 3 == 0 && num % 5 == 0)
+            //for (int num = 1; num <= 10; num++)
             //{
-            //    Console.WriteLine("THREE AND FIVE");
-            //}
-            //else if (num % 3 == 0)
-            //{
-            //    Console.WriteLine("THREE");
-            //}
-            //else if (num % 5 == 0)
-            //{
-            //    Console.WriteLine("FIVE");
+            //    if (num == 5)
+            //    {
+            //        break;
+            //    }
+            //    Console.WriteLine(num);
             //}
 
-            #endregion divisible 3 & 5
+
+            //for (int num = 1; num <= 10; num++)
+            //{
+            //    Console.WriteLine(num);
+            //    if (num == 5)
+            //    {
+            //        break;
+            //    }
+            //}
 
 
-
-            //for (int i = 1; i <= 5; i++)
+            //for (int a= 1; a <= 5; a++)
             //{
             //    for (int j = 1; j <= 5; j++)
-            //    { Console.Write($"{j}\t")
-            //            }
+            //    {
+            //        Console.Write($"*\t");
+            //    }
             //    Console.WriteLine();
             //}
 
-            #region even/odd number
-
-            // Ternary operator
-
-            //Console.WriteLine("Please enter a number");
-            //int num = int.Parse(Console.ReadLine());
-
-            //string result = (num % 2 == 0) ? "Even" : "Odd";
-
-            //Console.WriteLine($"{num} is {result} number");
-
-            #endregion even / odd
+            //for (int i=5; i >0; i--)
+            // {
+            //     for( int j=1; j <=i; j++)
+            //     {
+            //         Console.Write($"{j}\t");
+            //     }
+            //     Console.WriteLine();//new Line
 
 
-
-            #region grade meaning
-
-            //Console.WriteLine("please enter a number");
-            //char grade = char.Parse(Console.ReadLine());
-
-            //switch (grade)
+            // }
+            //int p = 1;
+            //for (; p<=5;)
             //{
-            //    case 'A':
-
-            //            Console.WriteLine($"{grade}:Distinction");
-            //            break;
-
-            //    case 'B':
-
-            //            Console.WriteLine($"{grade}: First class");
-            //            break;
-
-            //    case 'C':
-
-            //            Console.WriteLine($"{grade}:second class");
-            //            break;
-
-            //    case 'F':
-
-            //            Console.WriteLine($"{grade}: Failed"); 
-            //            break;
-
-            //    default:
-
-            //        Console.WriteLine($"{grade} : Invalid Grade");
-            //        break;
-
+            //    Console.Write($"{p}   ");
+            //    p++;
             //}
 
 
+            //for(int j=1; j<=5; j++)
+            //{
+            //    break;
+
+            //}
+
+            //no output , loop not executed
 
 
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    continue;
+            //}
+        //loop execute execute 10 times but not print anything because
+        //we does'nt take anything to print
+           
+            //for(int q = 1; q <= 10; q++)
+            //{
+            //    if(q == 5 || q == 6)
+            //    {
+            //        break;
+            //    }
+            //    Console.Write($"{q}   ");
+            //}
+            // 1  2  3  4
 
+            //for(int k=1; k<=10; k++)
+            //{
+            //    if(k==2)
+            //    {
+            //        continue;
+            //    }
+            //    if (k == 2) 
+            //    {
+            //        break;
+            //    }
+            //    Console.Write($"{k}   ");
+            //}
+              
 
-
-
-
-
-
-
-
-
-            #endregion grade meaning
+           
 
             Console.ReadLine();
-
-
-
-
-
-
-
-
-
-
-
-
 
         }
     }
