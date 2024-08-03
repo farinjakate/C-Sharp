@@ -4,56 +4,91 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _6_NullableType
+namespace _7_ConditionalStatement
 {
     internal class Program
     {
         static void Main(string[] args)
         {
 
-            //string name = "farin";
-            //Console.WriteLine(name);//farin
+            int i= 12;
+            //if (i == 10)// condition operator output is always true or false
+            // {
 
-            //name = null;
-            //Console.WriteLine(name);// it does'nt printed anything
-
-            //int? age = null;//non-nullable
-            //bool? isDeliverd = null;//non-nullable
-            //DateTime? dob = null;//non-nullable
-
-            //Nullable<int> marks = null;//nullable
-
-            ////int? = all int type values +null value
-
-            //int? a = null;
-            ////int b = (int)a;
-            //int b = a ?? 0;
-            //Console.WriteLine($"a:{a} b:{b}");
-
-            ////string email = "farin@gmail.com";
-            //string email = null;
-            //string emailInUpper = email?.ToUpper();
-            //Console.WriteLine($"email:{email} \nemail In Upper {emailInUpper}");
+            //  console.writeline($"{i} : ten");
+            //  console.writeline("even");
+            // }    
+            // else
+            // {
+            //     console.writeline($"{i} : not ten");
+            // }
 
 
+            // OR
+            //Ternary operator
+            //(condition) ? Statement1(true) : Statement2(false);
 
-            ///int a = 10;//make it nullable
-            int ? a = null;// ? means nullable ,null means absence of value
-            int b = a ?? 0;// here convert nullable type to non nullable means ager null pass kiye to
-                           //output 0 denga,ager value pass nahi kiye to user ke output ke liye wait arenga.
-                           ////(null coalesce operator) kehete hai ise.
-            Console.WriteLine($"a:{a}");
+            //i = 30;
+            //string result = (i == 10) ? "ten" : "not ten";
+            //console.writeline($"{i} :{result}");
 
-            string email = "FARINJAKATE786@GMAIL.COM";
-           // string emailInUpper = email.ToUpper();
-            string emailInLower = email.ToLower();
+            //OR
+            //if-else if-else ladder
+            //i = 40;
+            //if (i == 10)
+            //{
+            //    Console.WriteLine($"{i}:TEN");
+            //}
+            //else if (i == 20)
+            //{
+            //    Console.WriteLine($"{i}:TWENTY");
+            //}
+            //else if (i == 30)
+            //{
+            //    Console.WriteLine($"{i}:THIRTY");
+            //}
+            //else
+            //{ 
+            //    Console.WriteLine($"{i}:NOT 10 20 or 30");
+            //}
 
-            Console.WriteLine($"email:{email} \n email In Upper:{emailInLower}");
+            ////switch
+            //i = 30;
+            //switch(i)
+            //{
+            //    case 10:
+            //        Console.WriteLine($"{i} : TEN");
+            //        break;
+            //    case 20:
+            //        Console.WriteLine($"{i} : TWENTY");
+            //       break;
 
-           // Console.WriteLine($"email:{email} \n email In Upper:{emailInUpper}");
+            //    default:
+            //        Console.WriteLine($"{i} : NOT 10 20 or 30");
+            //        break;
+            //    case 30:
+            //        Console.WriteLine($"{i} : THIRTY");
+            //        break;
 
+
+
+
+            int e = 30, r = 10;
+            if (e > r)
+            {
+                Console.WriteLine("{e} is greater than {r}");
+            }
+            else if (r > e)
+            {
+                Console.WriteLine("{r} is grater than {e}");
+            }
+            else
+            {
+                Console.WriteLine("{e} and {r} is equal");
+            }
 
             Console.ReadLine();
+        }
 
 
 
@@ -63,6 +98,15 @@ namespace _6_NullableType
 
 
 
+
+
+
+
+
+
+
+
+        
 
 
 
@@ -71,4 +115,5 @@ namespace _6_NullableType
 
         }
     }
-}
+
+
