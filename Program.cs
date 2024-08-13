@@ -1,73 +1,154 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Net.Sockets;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _6_NullableType
+namespace _9_LoopingStatements
 {
     internal class Program
     {
         static void Main(string[] args)
         {
 
-            //string name = "farin";
-            //Console.WriteLine(name);//farin
+            //Console.WriteLine("HI EVERYONE");
+            //Console.WriteLine("HI EVERYONE");
+            //Console.WriteLine("HI EVERYONE");
+            //Console.WriteLine("HI EVERYONE");
+            //Console.WriteLine("HI EVERYONE");
 
-            //name = null;
-            //Console.WriteLine(name);// it does'nt printed anything
+            #region whileloop
+            //int start = 1;//Initialization
+            //while(start<=5)//Condition
+            //{
+            //    Console.WriteLine(start);
+            //    start++;//updation
 
-            //int? age = null;//non-nullable
-            //bool? isDeliverd = null;//non-nullable
-            //DateTime? dob = null;//non-nullable
+            //}
+            //1
+            //2
+            //3
+            //4
+            //5
 
-            //Nullable<int> marks = null;//nullable
-
-            ////int? = all int type values +null value
-
-            //int? a = null;
-            ////int b = (int)a;
-            //int b = a ?? 0;
-            //Console.WriteLine($"a:{a} b:{b}");
-
-            ////string email = "farin@gmail.com";
-            //string email = null;
-            //string emailInUpper = email?.ToUpper();
-            //Console.WriteLine($"email:{email} \nemail In Upper {emailInUpper}");
+            //int num = 1;
+            //while(num<=5)
+            //{
+            //    Console.WriteLine("farin");
+            //        num++;
+            //}
+            #endregion while loop
 
 
 
-            ///int a = 10;//make it nullable
-            int ? a = null;// ? means nullable ,null means absence of value
-            int b = a ?? 0;// here convert nullable type to non nullable means ager null pass kiye to
-                           //output 0 denga,ager value pass nahi kiye to user ke output ke liye wait arenga.
-                           ////(null coalesce operator) kehete hai ise.
-            Console.WriteLine($"a:{a}");
+            #region do While loop
+            //int num = 1;
+            //do
+            //{
+            //    Console.WriteLine("Rehana");
+            //    num++;
+            //} while (num <= 10);
 
-            string email = "FARINJAKATE786@GMAIL.COM";
-           // string emailInUpper = email.ToUpper();
-            string emailInLower = email.ToLower();
+            #endregion do while loop
 
-            Console.WriteLine($"email:{email} \n email In Upper:{emailInLower}");
+            //for (int num=1; num<=10;  num++)
+            //{
+            //    Console.WriteLine(num);
+            //}
 
-           // Console.WriteLine($"email:{email} \n email In Upper:{emailInUpper}");
+            //for (int num = 1; num <= 10; num++)
+            //{
+            //    if (num == 5)
+            //    {
+            //        break;
+            //    }
+            //    Console.WriteLine(num);
+            //}
 
+
+            //for (int num = 1; num <= 10; num++)
+            //{
+            //    Console.WriteLine(num);
+            //    if (num == 5)
+            //    {
+            //        break;
+            //    }
+            //}
+
+
+            //for (int a= 1; a <= 5; a++)
+            //{
+            //    for (int j = 1; j <= 5; j++)
+            //    {
+            //        Console.Write($"*\t");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            //for (int i=5; i >0; i--)
+            // {
+            //     for( int j=1; j <=i; j++)
+            //     {
+            //         Console.Write($"{j}\t");
+            //     }
+            //     Console.WriteLine();//new Line
+
+
+            // }
+            //int p = 1;
+            //for (; p<=5;)
+            //{
+            //    Console.Write($"{p}   ");
+            //    p++;
+            //}
+
+
+            //for(int j=1; j<=5; j++)
+            //{
+            //    break;
+
+            //}
+
+            //no output , loop not executed
+
+
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    continue;
+            //}
+        //loop execute execute 10 times but not print anything because
+        //we does'nt take anything to print
+           
+            //for(int q = 1; q <= 10; q++)
+            //{
+            //    if(q == 5 || q == 6)
+            //    {
+            //        break;
+            //    }
+            //    Console.Write($"{q}   ");
+            //}
+            // 1  2  3  4
+
+            //for(int k=1; k<=10; k++)
+            //{
+            //    if(k==2)
+            //    {
+            //        continue;
+            //    }
+            //    if (k == 2) 
+            //    {
+            //        break;
+            //    }
+            //    Console.Write($"{k}   ");
+            //}
+              
+
+           
 
             Console.ReadLine();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         }
     }
